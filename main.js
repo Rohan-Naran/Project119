@@ -11,6 +11,10 @@ random_name = quick_draw_data_set[random_number];
 console.log(random_name);
 document.getElementById("tobedrawn").innerHTML = 'Sketch To Be Drawn: ' + random_name;
 
+function preload(){
+    classifier = ml5.imageClassifier('DoodleNet');
+}
+    
 function setup(){
     canvas = createCanvas(280, 280);
     canvas.center();
