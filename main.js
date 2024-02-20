@@ -19,10 +19,34 @@ function setup(){
     canvas = createCanvas(280, 280);
     canvas.center();
     background('white');
+    canvas.mouseReleased(classifyCanvas);
 }
 
 function updateCanvas(){
     canvas.background('white');
+}
+
+function draw(){
+    strokeWeight(13);
+
+    stroke(rgb(0, 255, 0));
+
+    if(mouseIsPressed){
+        line(pmouseX, pmouseY, mouseX, mouseY);
+    }
+}
+
+function classifyCanvas(){
+    classifier.classify(canvas, gotResult);
+}
+
+function gotResult(error, results){
+    if(error){
+        console.error(error);
+    }
+    console.log(results);
+    drawn_sketch = results[0].label;
+    
 }
 
 function check_sketch(){
