@@ -1,0 +1,18 @@
+body{
+    background-color:aqua;
+}
+#score{
+    font-size: 30px;
+    float:left;
+    margin-left:10px;
+}
+#timer{
+    font-size: 30px;
+    float:right;
+    margin-right:10px;
+}
+#tobedrawn{
+    color:goldenrod;
+    font-weight:bolder;
+    font-size:35px;
+}
