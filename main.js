@@ -46,6 +46,8 @@ function gotResult(error, results){
     }
     console.log(results);
     drawn_sketch = results[0].label;
+    document.getElementById('label').innerHTML = 'Your Sketch: ' + drawn_sketch;
+    document.getElementById('confidence').innerHTML = 'Confidence: ' Math.round(results[0].confidence*100 + '%');
     
 }
 
